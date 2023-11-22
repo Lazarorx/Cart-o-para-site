@@ -1,0 +1,124 @@
+/* ===( CODE AASHU )=== */
+
+/* Importa a fonte Nunito do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;700;800;900;1000&display=swap");
+
+/* Define estilos globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+/* Estilos para o corpo da página */
+body {
+    background-color: rgb(2, 0, 12);
+    padding: 0px 50px;
+}
+
+/* Estilos para o contêiner principal */
+.container {
+    padding: 50px 0px;
+    height: 100vh;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Estilos para o contêiner do cartão pai */
+.parent {
+    height: 400px;
+    width: 300px;
+    padding: 20px;
+    perspective: 1000px;
+}
+
+/* Estilos para o cartão */
+.card {
+    padding-top: 100px;
+    transform-style: preserve-3d;
+    background-image: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center center;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+/* Efeito de rotação ao passar o mouse sobre o cartão */
+.card:hover {
+    background-position: 80% 20%;
+    transform: rotate3d(0.5, 1, 0, 30deg);
+}
+
+/* Estilos para a caixa de conteúdo do cartão */
+.content-box {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(5, 5, 5, 0.811);
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
+    transition: all 0.5s ease-in-out;
+    padding: 50px 25px 25px 25px;
+    transform-style: preserve-3d;
+}
+
+/* Estilos para o título do cartão */
+.card-title {
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 20px);
+}
+
+/* Efeito de elevação ao passar o mouse sobre o título do cartão */
+.card-title:hover {
+    transform: translate3d(0px, 0px, 50px);
+}
+
+/* Estilos para o conteúdo do cartão */
+.card-content {
+    padding-top: 15px;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 20px);
+}
+
+/* Efeito de elevação ao passar o mouse sobre o conteúdo do cartão */
+.card-content:hover {
+    transform: translate3d(0px, 0px, 50px);
+}
+
+/* Estilos para o link "See More" no cartão */
+.see-more {
+    display: block;
+    font-weight: 900;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: rgb(0, 136, 255);
+    padding-top: 15px;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 20px);
+}
+
+/* Efeito de elevação ao passar o mouse sobre o link "See More" */
+.see-more:hover {
+    transform: translate3d(0px, 0px, 50px);
+}
+
+/* Estilos para a caixa de data no cartão */
+.date-box {
+    position: absolute;
+    top: 75px;
+    left: 25px;
+    height: 60px;
+    width: 60px;
+    background-color: black;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: rgb(0, 102, 255) 0px 20px 60px 0px, rgb(0, 200, 255) 0px 18px 36px -18px;
+    transform: translate3d(
